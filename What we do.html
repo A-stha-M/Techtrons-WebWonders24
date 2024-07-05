@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Working Process</title>
+    <link href="https://fonts.googleapis.com/css2?family=Positivus:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="process-container">
+        <h1>Our Working Process</h1>
+        <p>Step-by-Step Guide to Achieving Your Business Goals</p>
+        
+        <div class="process-step">
+            <div class="step-header active" onclick="toggleStep(this)">
+                <span>01</span> Consultation
+            </div>
+            <div class="step-content" style="display: block;">
+                During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.
+            </div>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <span>02</span> Research and Strategy Development
+            </div>
+            <div class="step-content">
+                Content for Research and Strategy Development.
+            </div>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <span>03</span> Implementation
+            </div>
+            <div class="step-content">
+                Content for Implementation.
+            </div>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <span>04</span> Monitoring and Optimization
+            </div>
+            <div class="step-content">
+                Content for Monitoring and Optimization.
+            </div>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <span>05</span> Reporting and Communication
+            </div>
+            <div class="step-content">
+                Content for Reporting and Communication.
+            </div>
+        </div>
+        
+        <div class="process-step">
+            <div class="step-header" onclick="toggleStep(this)">
+                <span>06</span> Continual Improvement
+            </div>
+            <div class="step-content">
+                Content for Continual Improvement.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleStep(element) {
+            const content = element.nextElementSibling;
+            const isActive = element.classList.contains('active');
+            document.querySelectorAll('.step-header').forEach(header => {
+                header.classList.remove('active');
+                header.nextElementSibling.style.display = 'none';
+            });
+            if (!isActive) {
+                element.classList.add('active');
+                content.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
